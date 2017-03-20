@@ -16,10 +16,6 @@ public class Account {
     	return balance;
     	 }
     
-    protected void setBalance(double balance){
-    	this.balance = balance;
-     }
-    
     public void credit(double add ){
 		
 		balance += add ;

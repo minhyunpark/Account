@@ -16,13 +16,19 @@ public class AccountTest {
 	    Scanner sc1 = new Scanner(System.in);
 	    double m  = sc1.nextDouble();
 		ac1.credit(m);
-		System.out.printf("Account1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("\nAccount1 balance : $%.2f\n",ac1.balance);
 		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
-		System.out.printf("Enter withdrawl amount for Account1 : ");
+		System.out.printf("Enter withdrawl amount for Account2 : ");
 		double n  = sc1.nextDouble();
 		ac2.debit(n);
-		System.out.printf("Account1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("\nAccount1 balance : $%.2f\n",ac1.balance);
 		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
+		ac1.nextMonth();
+		ac2.nextMonth();
+		System.out.printf("\nnext month!",ac1.balance);
+		System.out.printf("\nAccount1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
+		
 		
 		
 		
