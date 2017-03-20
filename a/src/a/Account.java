@@ -3,11 +3,14 @@ package a;
 
 
 public class Account {
-    double x;
-	Account(double x){
-		this.x = x;
+	
+	
+	protected double balance;
+	
+	Account(double balance){
+		this.balance = balance;
 	}
-	private double balance;
+	
 	
     public double getBalance(){
     	return balance;

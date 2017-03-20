@@ -7,6 +7,40 @@ public class AccountTest {
 	
 	public static void main(String[] args){
 		
+		CheckingAccount ac1 = new CheckingAccount(100,-50,0.01,0.07);
+		CheckingAccount ac2 = new CheckingAccount(100,-50,0.01,0.07);
+		System.out.printf("Account1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
+	    System.out.printf("Enter deposit amount for Account1 : ");
+	    
+	    Scanner sc1 = new Scanner(System.in);
+	    double m  = sc1.nextDouble();
+		ac1.credit(m);
+		System.out.printf("Account1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
+		System.out.printf("Enter withdrawl amount for Account1 : ");
+		double n  = sc1.nextDouble();
+		ac2.debit(n);
+		System.out.printf("Account1 balance : $%.2f\n",ac1.balance);
+		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
+		
+		
+		
+	}
+	}
+
+
+
+
+/*package a;
+
+import java.util.Scanner;
+
+
+public class AccountTest {
+	
+	public static void main(String[] args){
+		
 		
 		Account ac1 = new Account(0);
 		Account ac2 = new Account(0);
@@ -32,3 +66,4 @@ public class AccountTest {
 	
 
 }
+*/
