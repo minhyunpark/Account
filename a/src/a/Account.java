@@ -3,17 +3,19 @@ package a;
 
 
 public class Account {
-    
-	Account(){}
+    double x;
+	Account(double x){
+		this.x = x;
+	}
 	private double balance;
 	
     public double getBalance(){
     	return balance;
     	 }
     
-    //protected void setBalance(double balance){
-    //	this.balance = balance;
-    // }
+    protected void setBalance(double balance){
+    	this.balance = balance;
+     }
     
     public void credit(double add ){
 		

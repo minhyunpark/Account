@@ -8,8 +8,8 @@ public class AccountTest {
 	public static void main(String[] args){
 		
 		
-		Account ac1 = new Account();
-		Account ac2 = new Account();
+		Account ac1 = new Account(0);
+		Account ac2 = new Account(0);
 		ac1.credit(50);
 		System.out.printf("account1 balance : $%.2f\n",ac1.getBalance());
 		System.out.printf("account2 balance : $%.2f\n",ac2.getBalance());
