@@ -21,8 +21,8 @@ public class AccountTest {
 		System.out.printf("account1 balance : $%.2f\n",ac1.getBalance());
 		System.out.printf("account2 balance : $%.2f\n",ac2.getBalance());
 		System.out.printf("\nEnter withdrawal amount for account :");
-		Scanner sc2 = new Scanner(System.in);
-		double n  = sc2.nextDouble();
+		
+		double n  = sc1.nextDouble();
 		ac2.debit(n);
 		System.out.printf("account1 balance : $%.2f\n",ac1.getBalance());
 		System.out.printf("account2 balance : $%.2f\n",ac2.getBalance());
