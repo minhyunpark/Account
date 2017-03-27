@@ -2,7 +2,6 @@ package a;
 
 import java.util.Scanner;
 
-
 public class AccountTest {
 	
 	public static void main(String[] args){
@@ -29,10 +28,7 @@ public class AccountTest {
 		System.out.printf("\nAccount1 balance : $%.2f\n",ac1.balance);
 		System.out.printf("Account2 balance : $%.2f\n",ac2.balance);
 		
-		
-		
-		
-	}
+		}
 	}
 
 
@@ -73,3 +69,5 @@ public class AccountTest {
 
 }
 */
+ 
+ 

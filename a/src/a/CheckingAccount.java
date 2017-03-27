@@ -2,20 +2,20 @@ package a;
 
 public class CheckingAccount extends Account {
 	
-	private double credit_limit;
+	private double creditLimit;
 	private double interest;
-	private double loan_interest;
+	private double loanInterest;
 	
 	CheckingAccount(double balance,double credit_limit,double interest,double loan_interest){
 		super(balance);
-		this.credit_limit = credit_limit;
+		this.creditLimit = credit_limit;
 		this.interest = interest;
-		this.loan_interest = loan_interest;
+		this.loanInterest = loan_interest;
 	}
 
 	@Override
     public void debit(double sub){
-		if(balance - credit_limit > sub){
+		if(balance - creditLimit > sub){
 			balance -=sub;
 			if(balance<0){
 			System.out.println("Debit amount exceeded account balance");
@@ -30,12 +30,10 @@ public class CheckingAccount extends Account {
     	if(balance>=0){
     	balance *= (1+interest);
     	}else{
-    	balance *= (1+loan_interest);
+    	balance *= (1+loanInterest);
     	}
     }
-
 }
 	
-
 
 
