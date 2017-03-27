@@ -6,16 +6,17 @@ public class CheckingAccount extends Account {
 	private double interest;
 	private double loanInterest;
 	
-	CheckingAccount(double balance,double credit_limit,double interest,double loan_interest){
+	
+	public CheckingAccount(double balance,double creditLimit,double interest,double loanInterest){
 		super(balance);
-		this.creditLimit = credit_limit;
+		this.creditLimit = creditLimit;
 		this.interest = interest;
-		this.loanInterest = loan_interest;
+		this.loanInterest = loanInterest;
+		
 	}
-
 	@Override
     public void debit(double sub){
-		if(balance - creditLimit > sub){
+		if(balance + creditLimit > sub){
 			balance -=sub;
 			if(balance<0){
 			System.out.println("Debit amount exceeded account balance");
@@ -26,14 +27,36 @@ public class CheckingAccount extends Account {
 		}
 		
 	}
-    public void nextMonth(){
-    	if(balance>=0){
-    	balance *= (1+interest);
+
+	
+    
+	public double getWithdrawableAccount(){
+    	if(balance + creditLimit >0){
+    		return balance + creditLimit;
     	}else{
-    	balance *= (1+loanInterest);
+    		return 0;
     	}
+    	
+    	
     }
-}
+    
+    public void passTime(int time){
+    	if(balance>=0){
+    		 balance *= (1+time*interest);
+    		
+    	}else {
+    		 balance *= (1+time*loanInterest);
+    		
+    	}
+    	
+    	}
+    
+    public  boolean isBankrupted(){
+    }
+    	
+ }
+    
+
 	
 
 

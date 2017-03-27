@@ -1,12 +1,17 @@
 package a;
 
-public class Account {
+public abstract class Account {
 	
 	protected double balance;
 	
-	Account(double balance){
+	public Account(double balance){
 		this.balance = balance;
 	}
+	
+	public abstract double getWithdrawableAccount();
+	
+	public abstract void passTime(int time);
+	
 	
 	public double getBalance(){
     	return balance;
