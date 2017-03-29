@@ -6,7 +6,7 @@ public class AccountTest {
 	
 	public static void main(String[] args){
 		Account account1 = new CheckingAccount(100,50,0.01,0.07);
-		//Account account2 = new SavingAccouunt(100,0.05);
+		Account account2 = new SavingAccount(100,0.05);
 		
 		//CheckingAccount
 		Scanner scan = new Scanner(System.in);
@@ -17,17 +17,89 @@ public class AccountTest {
 		account1.debit(amount);
 		System.out.println();
 		System.out.printf("Account1 balance: $%.2f \t현재출금가능액:%.2f\n", account1.balance,account1.getWithdrawableAccount());
+	
+		if(((CheckingAccount)account1).isBankrupted()==false){
+			System.out.println("account1 went Bankrupt!");
+		}
+		
+		
 		account1.passTime(1);
 		System.out.printf("Account1 balance: $%.2f \t현재출금가능액:%.2f\n", account1.balance,account1.getWithdrawableAccount());
+		if(((CheckingAccount)account1).isBankrupted()==false){
+			System.out.println("account1 went Bankrupt!");
+		}
 		
 		account1.passTime(5);
 		System.out.printf("Account1 balance: $%.2f \t현재출금가능액:%.2f\n", account1.balance,account1.getWithdrawableAccount());
-		
-		
-		
-		
+		if(((CheckingAccount)account1).isBankrupted()==false){
+			System.out.println("account1 went Bankrupt!");
 		}
+		
+		
+		
+		
+		
+		
+	
+		//SavingAccount
+		System.out.println("");
+		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		
+		System.out.println("6 Month later!");
+		account2.passTime(6);
+		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		account2.debit(50);
+		
+		System.out.println("next 6 Month later!");
+		account2.passTime(6);
+		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		
+		System.out.println("next 1 Month later!");
+		account2.passTime(1);
+		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		account2.debit(50);
+		
+		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		
+		
+		
 	}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
 
 
 

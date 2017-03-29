@@ -36,8 +36,6 @@ public class CheckingAccount extends Account {
     	}else{
     		return 0;
     	}
-    	
-    	
     }
     
     public void passTime(int time){
@@ -48,14 +46,16 @@ public class CheckingAccount extends Account {
     		 balance *= (1+time*loanInterest);
     		
     	}
-    	
-    	}
+    }
     
     public  boolean isBankrupted(){
-    }
-    	
- }
-    
+    	if(balance + creditLimit >0){
+    		return true;
+    	}else{
+    		return false;
+    	}
+     }
+}
 
 	
 
