@@ -1,6 +1,6 @@
 package a;
 
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account  {
 	
 	private double creditLimit;
 	private double interest;
@@ -42,6 +42,21 @@ public class CheckingAccount extends Account {
     public  boolean isBankrupted(){
     	return balance > -creditLimit;
      }
+    
+    public double EstimateValue(int month){
+    	if(balance>=0){
+    		balance = balance * Math.pow(1+interest,month);
+    		return balance;
+    		 
+    	}else {
+    		balance = balance * Math.pow(1+loanInterest,month);
+    		return balance;
+    		
+    	}
+    }
+    public String toString(){
+		return String.format("CheckingAccount_Balance : " + balance);
+    }
 }
 
 	

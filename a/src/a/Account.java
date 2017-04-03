@@ -1,6 +1,6 @@
 package a;
 
-public abstract class Account {
+public abstract class Account implements Valuable {
 	
 	protected double balance;
 	

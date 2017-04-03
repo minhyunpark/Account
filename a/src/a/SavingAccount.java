@@ -36,6 +36,13 @@ public class SavingAccount extends Account {
 		}
 					
 	}
+	public double EstimateValue(int month){
+		balance = balance * Math.pow(1+interest,month);
+		return balance;
+	}
+	 public String toString(){
+			return String.format("SavingsAccount_Balance : " + balance);
+	    }
 }
 
 
