@@ -22,10 +22,8 @@ public abstract class Account {
 	}
 	
 	public void debit(double sub){
-		if(balance < sub){
-			System.out.println("Debit amount exceeded account balance");
-		}else{
+		
 		   balance -= sub;
-		}
+		
 	}
 }

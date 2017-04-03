@@ -17,7 +17,6 @@ public class AccountTest {
 		account1.debit(amount);
 		System.out.println();
 		System.out.printf("Account1 balance: $%.2f \t현재출금가능액:%.2f\n", account1.balance,account1.getWithdrawableAccount());
-	
 		if(((CheckingAccount)account1).isBankrupted()==false){
 			System.out.println("account1 went Bankrupt!");
 		}
@@ -36,11 +35,6 @@ public class AccountTest {
 		}
 		
 		
-		
-		
-		
-		
-	
 		//SavingAccount
 		System.out.println("");
 		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
@@ -48,6 +42,7 @@ public class AccountTest {
 		System.out.println("6 Month later!");
 		account2.passTime(6);
 		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
+		
 		account2.debit(50);
 		
 		System.out.println("next 6 Month later!");
@@ -57,8 +52,8 @@ public class AccountTest {
 		System.out.println("next 1 Month later!");
 		account2.passTime(1);
 		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
-		account2.debit(50);
 		
+		account2.debit(50);
 		System.out.printf("Account2 balance: $%.2f \t현재출금가능액:%.2f\n", account2.balance,account2.getWithdrawableAccount());
 		
 		
