@@ -31,10 +31,10 @@ public class CheckingAccount extends Account  {
     
     public void passTime(int time){
     	if(balance>=0){
-    		balance = balance * Math.pow(1+interest,time);
+    		balance *= Math.pow(1+interest,time);
     		 
     	}else {
-    		balance = balance * Math.pow(1+loanInterest,time);
+    		balance *= Math.pow(1+loanInterest,time);
     		
     	}
     }
@@ -45,11 +45,11 @@ public class CheckingAccount extends Account  {
     
     public double EstimateValue(int month){
     	if(balance>=0){
-    		balance = balance * Math.pow(1+interest,month);
+    		balance *= Math.pow(1+interest,month);
     		return balance;
     		 
     	}else {
-    		balance = balance * Math.pow(1+loanInterest,month);
+    		balance *= Math.pow(1+loanInterest,month);
     		return balance;
     		
     	}

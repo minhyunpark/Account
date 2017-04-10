@@ -26,18 +26,16 @@ public class SavingAccount extends Account {
 		}
 	
 	public void passTime(int time){
-		if(time<0){
-			
-		}else{
+		if(time>0){
 			aTime += time;
-			if((time<contractPeriod) && (aTime>contractPeriod) ){
-				balance = balance * Math.pow(1+interest,contractPeriod);
+			if((time<=contractPeriod) && (aTime>=contractPeriod) ){
+				balance *= Math.pow(1+interest,contractPeriod);
 			}
 		}
 					
 	}
 	public double EstimateValue(int month){
-		balance = balance * Math.pow(1+interest,month);
+		balance *= Math.pow(1+interest,month);
 		return balance;
 	}
 	 public String toString(){
