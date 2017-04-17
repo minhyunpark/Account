@@ -4,13 +4,16 @@ public abstract class Account implements Valuable {
 	
 	protected double balance;
 	
+	
 	public Account(double balance){
 		this.balance = balance;
+
 	}
 	
 	public abstract double getWithdrawableAccount();
 	
-	public abstract void passTime(int time);
+	public abstract void passTime();
+	public abstract void passTime(int month);
 	
 	
 	public double getBalance(){
@@ -21,9 +24,9 @@ public abstract class Account implements Valuable {
 		balance += add ;
 	}
 	
-	public void debit(double sub){
-		
-		   balance -= sub;
-		
+    public void debit(double amount) throws Exception {
+		balance -= amount;
 	}
+	
+	 
 }

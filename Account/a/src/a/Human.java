@@ -8,10 +8,15 @@ public class Human implements Valuable {
 		this.name = name;
 		this.age = age;
 	}
-	
-	public double EstimateValue(int month){
+	@Override
+	public double estimateValue(int month){
 		return Double.POSITIVE_INFINITY;
 	}
+	@Override
+	public double estimateValue(){
+		return Double.POSITIVE_INFINITY;
+	}
+	
 	public String toString(){
 		return String.format("Human name : %s \nregitstered age :  %d",name,age);
 		
